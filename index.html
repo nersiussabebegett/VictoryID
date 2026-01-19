@@ -1,0 +1,82 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VICTORY-ID | Pro Inventory Management</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            -webkit-font-smoothing: antialiased;
+            background-color: #f8fafc;
+        }
+        
+        /* Smooth Scroll & Transitions */
+        html { scroll-behavior: smooth; }
+        .animate-in { animation: fadeIn 0.6s ease-out; }
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        /* Scrollbar Styling */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: #e2e8f0; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #cbd5e1; }
+
+        @media print {
+            body { 
+                background: white !important; 
+                margin: 0 !important;
+                padding: 0 !important;
+                -webkit-print-color-adjust: exact !important;
+                print-color-adjust: exact !important;
+            }
+            
+            .no-print { display: none !important; }
+            
+            .print-only { 
+                display: block !important; 
+                width: 100% !important;
+                background: white !important;
+            }
+
+            @page { 
+                margin: 1cm; 
+                size: A4;
+            }
+
+            /* Fixes for backgrounds during PDF generation */
+            .bg-indigo-600 { background-color: #4f46e5 !important; color: white !important; }
+            .bg-slate-900 { background-color: #0f172a !important; color: white !important; }
+            .text-indigo-600 { color: #4f46e5 !important; }
+            .border-indigo-600 { border-color: #4f46e5 !important; }
+            
+            table { border-collapse: collapse; width: 100%; }
+            th, td { border: 1px solid #e2e8f0 !important; }
+        }
+        
+        .print-only { display: none; }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react/": "https://esm.sh/react@^19.2.3/",
+    "react": "https://esm.sh/react@^19.2.3",
+    "@google/genai": "https://esm.sh/@google/genai@^1.37.0",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.3/",
+    "recharts": "https://esm.sh/recharts@^3.6.0",
+    "react-barcode": "https://esm.sh/react-barcode@^1.5.3"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+<body class="text-slate-900">
+    <div id="root"></div>
+<script type="module" src="/index.tsx"></script>
+</body>
+</html>
